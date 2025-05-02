@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Intresting_Books.Models
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = "Unknown";
+        public string Author { get; set; } = "Unknown";
+
+        public string About() =>
+           $"#{Id} '{Title}' by {Author}";
+    }
+}
