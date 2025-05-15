@@ -57,6 +57,7 @@
             RemoveButton = new Button();
             CancelButton = new Button();
             MainListBox = new ListBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // AddButton
@@ -291,9 +292,9 @@
             // 
             // RemoveButton
             // 
-            RemoveButton.Location = new Point(176, 252);
+            RemoveButton.Location = new Point(293, 252);
             RemoveButton.Name = "RemoveButton";
-            RemoveButton.Size = new Size(111, 31);
+            RemoveButton.Size = new Size(119, 31);
             RemoveButton.TabIndex = 31;
             RemoveButton.Text = "Видалити";
             RemoveButton.UseVisualStyleBackColor = true;
@@ -302,7 +303,7 @@
             // 
             CancelButton.Location = new Point(293, 215);
             CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(119, 68);
+            CancelButton.Size = new Size(119, 31);
             CancelButton.TabIndex = 32;
             CancelButton.Text = "Відмінити";
             CancelButton.UseVisualStyleBackColor = true;
@@ -316,11 +317,21 @@
             MainListBox.Size = new Size(903, 364);
             MainListBox.TabIndex = 33;
             // 
+            // button1
+            // 
+            button1.Location = new Point(176, 251);
+            button1.Name = "button1";
+            button1.Size = new Size(111, 32);
+            button1.TabIndex = 34;
+            button1.Text = "Вибрати";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(927, 678);
+            Controls.Add(button1);
             Controls.Add(MainListBox);
             Controls.Add(CancelButton);
             Controls.Add(RemoveButton);
@@ -387,5 +398,6 @@
         private Button RemoveButton;
         private Button CancelButton;
         private ListBox MainListBox;
+        private Button button1;
     }
 }
