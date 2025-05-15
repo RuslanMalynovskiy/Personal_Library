@@ -29,36 +29,6 @@ namespace Personal_Library.Models
             return books.Where(predicate).ToList();
         }
 
-        public void GenerateTestData(int count)
-        {
-            books.Clear();
-            for (int i = 1; i <= count; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    books.Add(new FictionBook
-                    {
-                        Id = i,
-                        Title = $"Fiction {i}",
-                        Author = $"Author {i}",
-                        Publication = $"Publisher {i}",
-                        Genre = "Fantasy"
-                    });
-                }
-                else
-                {
-                    books.Add(new HobbyBook
-                    {
-                        Id = i,
-                        Title = $"Hobby {i}",
-                        Author = $"Author {i}",
-                        Publication = $"Publisher {i}",
-                        HobbyType = "Knitting"
-                    });
-                }
-            }
-        }
-
         public List<Book> GetAllBooks()
         {
             return books.ToList(); // копія списку

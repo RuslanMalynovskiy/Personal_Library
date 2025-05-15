@@ -15,21 +15,63 @@ namespace Personal_Library.Forms
         public MainForm()
         {
             InitializeComponent();
-            comboBox1.Items.AddRange(new string[]
+            BookChoose.Items.AddRange(new string[]
             {
+                "Тип книги",
                 "Фікшн",
-                "Фантастика",
                 "Хобі",
                 "Господарство",
                 "Спеціальна",
-                "Інше",
-                "Усі"
+                "Інше"
             });
-            comboBox1.SelectedIndex = 0; // обрати перший елемент
+            BookChoose.SelectedIndex = 0; // обрати перший елемент
+
+            StatusSort.Items.AddRange(new string[]
+            { 
+                "Наявна",
+                "Відсутня",
+                "Очікую на прибуття",
+                "Запозичена"
+            });
         }
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AuthorSort_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusCheck_CheckedChanged(object sender, EventArgs e)
         {
 
         }
