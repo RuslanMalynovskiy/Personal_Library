@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Intresting_Books.Models;
+using Personal_Library.Models;
 
 namespace Personal_Library.Models
 {
@@ -12,7 +12,7 @@ namespace Personal_Library.Models
     {
         public string Specification { get; set; } = "Unknown";
 
-        public new string About() =>
+        public override string About() =>
            base.About() + $" Specification: {Specification}";
     }
 }
