@@ -365,8 +365,11 @@ namespace Personal_Library.Forms
 
                 return true;
             }).ToList();
-
-            UpdateListBox(filtered);
+            if (filtered.Count == 0)
+            {
+                MessageBox.Show("Співпадінь не знайдено!");
+            } 
+            else UpdateListBox(filtered);
         }
 
         private void SortReset_Click(object sender, EventArgs e)
