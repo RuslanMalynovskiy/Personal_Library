@@ -10,8 +10,9 @@ namespace Personal_Library.Models
     internal class FictionBook : Book
     {
         public string Genre { get; set; } = "Unknown";
+        public FictionBook() => Type = "FictionBook";
 
         public override string About() =>
-           base.About() + $" Genre: {Genre}";
+           base.About() + $" Жанр: {Genre}";
     }
 }

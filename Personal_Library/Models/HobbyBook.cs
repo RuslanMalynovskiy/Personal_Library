@@ -10,8 +10,8 @@ namespace Personal_Library.Models
     internal class HobbyBook : Book
     {
         public string HobbyType { get; set; } = "Unknown";
-
-    public override string About() =>
-       base.About() + $" Hobby: {HobbyType}";
+        public HobbyBook() => Type = "HobbyBook";
+        public override string About() =>
+       base.About() + $" Хобі: {HobbyType}";
     }
 }

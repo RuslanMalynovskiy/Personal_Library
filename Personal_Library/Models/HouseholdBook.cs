@@ -10,8 +10,8 @@ namespace Personal_Library.Models
     internal class HouseholdBook : Book
     {
         public string HouseholdType { get; set; } = "Unknown";
-
+        public HouseholdBook() => Type = "HouseholdBook";
         public override string About() =>
-           base.About() + $" Type of household: {HouseholdType}";
+           base.About() + $" Тип домогосподарства: {HouseholdType}";
     }
 }

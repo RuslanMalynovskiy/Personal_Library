@@ -13,10 +13,10 @@ namespace Personal_Library.Models
         public string Title { get; set; } = "Unknown";
         public string Author { get; set; } = "Unknown";
         public string Publication { get; set; } = "Unknown";
-        public string BookStatus { get; set; } = "Unknown";
-        public string Rating { get; set; } = "Unknown";
-
+        public string Availability { get; set; } = "Unknown";
+        public string Type { get; set; } = "Book";
+        public int Rating { get; set; } = 0;
         public virtual string About() =>
-           $"#{Id} '{Title}' by {Author} published by {Publication}";
+           $"#{Id} '{Title}' за авторством {Author}, за видавництвом {Publication}, Наявність: {Availability}, Оцінка: {Rating}/5";
     }
 }

@@ -10,9 +10,10 @@ namespace Personal_Library.Models
 {
     public class SpecialBook : Book
     {
-        public string Specification { get; set; } = "Unknown";
+        public string Specification { get; set; } = "Unknown"; 
+        public SpecialBook() => Type = "SpecialBook";
 
         public override string About() =>
-           base.About() + $" Specification: {Specification}";
+           base.About() + $" Специфікація: {Specification}";
     }
 }
