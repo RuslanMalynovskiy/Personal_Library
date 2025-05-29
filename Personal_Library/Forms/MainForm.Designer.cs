@@ -347,6 +347,7 @@
             MainListBox.Name = "MainListBox";
             MainListBox.Size = new Size(753, 319);
             MainListBox.TabIndex = 33;
+            MainListBox.SelectedIndexChanged += MainListBox_SelectedIndexChanged;
             // 
             // BookStatus
             // 
@@ -484,7 +485,7 @@
             ForeColor = SystemColors.ControlText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
-            Text = "Персональна бібліотека";
+            Text = "Персональна Бібліотека";
             ResumeLayout(false);
             PerformLayout();
         }

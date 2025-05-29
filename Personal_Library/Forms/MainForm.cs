@@ -107,7 +107,17 @@ namespace Personal_Library.Forms
 
         private bool IsOnlyDigits(string input)
         {
-            return !string.IsNullOrWhiteSpace(input) && input.All(char.IsDigit);
+            string trimmed = input?.Replace(" ", "") ?? "";
+            return trimmed.Length > 0 && trimmed.All(char.IsDigit);
+        }
+
+        private void UpdateBookInfo(Book book, string title, string author, string publication, string status, string rating)
+        {
+            book.Title = title;
+            book.Author = author;
+            book.Publication = publication;
+            book.Availability = status;
+            book.Rating = int.TryParse(rating, out int r) ? r : 0;
         }
 
         private void ClearInputs()
@@ -155,9 +165,9 @@ namespace Personal_Library.Forms
                 return;
             }
 
-            if (IsOnlyDigits(Author.Text) || IsOnlyDigits(Publication.Text))
+            if (IsOnlyDigits(Author.Text) || IsOnlyDigits(Publication.Text) || IsOnlyDigits(Spec.Text))
             {
-                MessageBox.Show("Не використовуйте лише цифри в цих полях: Автор, Видавництво");
+                MessageBox.Show("Не використовуйте лише цифри в цих полях: Автор, Видавництво, Специфікація");
                 return;
             }
 
@@ -230,15 +240,29 @@ namespace Personal_Library.Forms
         {
             if (selectedBook == null) return;
 
-            if (string.IsNullOrWhiteSpace(Title.Text) || BookChoose.SelectedIndex == -1 || string.IsNullOrWhiteSpace(Spec.Text))
+            if (string.IsNullOrWhiteSpace(Title.Text) ||
+                BookChoose.SelectedItem == null ||
+                string.IsNullOrWhiteSpace(Spec.Text))
             {
                 MessageBox.Show("Заповніть Назву, Тип книги та Специфікацію.");
                 return;
             }
 
+            if (IsOnlyDigits(Author.Text) || IsOnlyDigits(Publication.Text) || IsOnlyDigits(Spec.Text))
+            {
+                MessageBox.Show("Не використовуйте лише цифри в цих полях: Автор, Видавництво, Специфікація.");
+                return;
+            }
+
             string title = Title.Text.Trim();
-            string author = string.IsNullOrWhiteSpace(Author.Text) ? "Автор невідомий" : Author.Text.Trim();
-            string publication = string.IsNullOrWhiteSpace(Publication.Text) ? "Видавництво невідоме" : Publication.Text.Trim();
+            string author = string.IsNullOrWhiteSpace(Author.Text) || Author.Text == "Автор"
+                ? "Автор невідомий"
+                : Author.Text.Trim();
+
+            string publication = string.IsNullOrWhiteSpace(Publication.Text) || Publication.Text == "Видавництво"
+                ? "Видавництво невідоме"
+                : Publication.Text.Trim();
+
             string status = BookStatus.SelectedItem?.ToString() ?? "Невідомо";
             string rating = BookRating.SelectedItem?.ToString() ?? "0";
             string type = BookChoose.SelectedItem.ToString();
@@ -282,16 +306,12 @@ namespace Personal_Library.Forms
                         "Господарство" => new HouseholdBook { HouseholdType = spec },
                         "Спеціальна" => new SpecialBook { Specification = spec },
                         "Інше" => new OtherBook { BookType = spec },
-                        _ => new Book()
+                        _ => throw new InvalidOperationException($"Тип книги «{type}» не підтримується.")
                     };
                     break;
             }
 
-            updatedBook.Title = title;
-            updatedBook.Author = author;
-            updatedBook.Publication = publication;
-            updatedBook.Availability = status;
-            updatedBook.Rating = int.TryParse(rating, out int r) ? r : 0;
+            UpdateBookInfo(updatedBook, title, author, publication, status, rating);
 
             if (typeChanged)
             {
@@ -368,7 +388,7 @@ namespace Personal_Library.Forms
             if (filtered.Count == 0)
             {
                 MessageBox.Show("Співпадінь не знайдено!");
-            } 
+            }
             else UpdateListBox(filtered);
         }
 
@@ -416,5 +436,9 @@ namespace Personal_Library.Forms
             }
         }
 
+        private void MainListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

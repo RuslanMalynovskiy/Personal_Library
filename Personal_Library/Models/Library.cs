@@ -29,7 +29,16 @@ namespace Personal_Library.Models
         public bool Remove(int id)
         {
             var book = books.FirstOrDefault(b => b.Id == id);
-            return book != null && books.Remove(book);
+            if (book == null) return false;
+
+            books.Remove(book);
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                books[i].Id = i + 1;
+            }
+
+            return true;
         }
 
         public List<Book> GetAllBooks() => books.ToList();
