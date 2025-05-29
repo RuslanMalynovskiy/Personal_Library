@@ -347,7 +347,6 @@
             MainListBox.Name = "MainListBox";
             MainListBox.Size = new Size(753, 319);
             MainListBox.TabIndex = 33;
-            MainListBox.SelectedIndexChanged += MainListBox_SelectedIndexChanged;
             // 
             // BookStatus
             // 

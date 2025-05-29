@@ -436,9 +436,5 @@ namespace Personal_Library.Forms
             }
         }
 
-        private void MainListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
