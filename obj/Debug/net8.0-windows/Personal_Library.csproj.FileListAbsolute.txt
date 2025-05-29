@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.Forms.MainForm.resources
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.sourcelink.json
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\bin\Debug\net8.0-windows\Personal_Library.exe
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\bin\Debug\net8.0-windows\Personal_Library.deps.json
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\bin\Debug\net8.0-windows\Personal_Library.runtimeconfig.json
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\bin\Debug\net8.0-windows\Personal_Library.dll
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\bin\Debug\net8.0-windows\Personal_Library.pdb
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.dll
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\refint\Personal_Library.dll
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.pdb
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\Personal_Library.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Programs\Visual Studio\Personal_Library\Personal_Library\obj\Debug\net8.0-windows\ref\Personal_Library.dll
